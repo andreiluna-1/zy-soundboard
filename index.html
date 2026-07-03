@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZY Soundboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#1a1a1a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#2b2b2b;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+    text-align:center;
+}
+
+h1{
+    color:white;
+    margin-bottom:40px;
+    letter-spacing:2px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.sound-btn{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    color:white;
+
+    background:linear-gradient(#8b5cf6,#6d28d9);
+
+    box-shadow:
+        0 10px 0 #4c1d95,
+        0 15px 30px rgba(0,0,0,.5);
+
+    transition:.08s;
+}
+
+.sound-btn:hover{
+    filter:brightness(1.1);
+}
+
+.sound-btn:active{
+    transform:translateY(8px);
+    box-shadow:
+        0 2px 0 #4c1d95,
+        0 6px 15px rgba(0,0,0,.4);
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>ZY SOUNDBOARD</h1>
+
+<div class="grid">
+
+<button class="sound-btn" onclick="play('zy ahh.mp3')">
+AHH
+</button>
+
+<button class="sound-btn" onclick="play('zy arf.mp3')">
+ARF
+</button>
+
+<button class="sound-btn" onclick="play('zy bungal.mp3')">
+BUNGAL
+</button>
+
+</div>
+
+</div>
+
+<script>
+function play(file){
+    new Audio(file).play();
+}
+</script>
+
+</body>
+</html>
